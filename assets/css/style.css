@@ -1,0 +1,85 @@
+@font-face {
+  font-family: arcade;
+  src: url(/assets/fonts/pcsenior-webfont.woff);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: arcade;
+  color: #ae00fb;
+}
+
+.default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-menu {
+  height: 45%;
+
+  justify-content: space-between;
+  flex-direction: column;
+
+  font-size: 40px;
+
+  transition: 1s linear;
+}
+
+.menu:hover {
+  color: #b6e11d;
+}
+
+.start {
+  font-size: 45px;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.title {
+  margin-bottom: 40px;
+
+  font-size: 60px;
+
+  cursor: default;
+}
+
+.main {
+  position: relative;
+
+  height: 100vh;
+  width: 100%;
+
+  background: url("/assets/img/road.png") 0% 70%;
+
+  /* background-size: cover;*/
+  background-size: 100vw 90%;
+
+  animation: road 8s infinite linear;
+}
+
+.sett {
+  height: 350px;
+
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-330%);
+
+  transition: 0.3s;
+}
+
+.sett-parent {
+  display: none;
+}
+
+@keyframes road {
+  to {
+    background-position: -100vw 70%;
+  }
+}
